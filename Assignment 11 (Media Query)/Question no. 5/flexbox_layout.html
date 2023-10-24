@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox responsive layout</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        margin: 10px;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+        background-color: rgb(147, 147, 147);
+    }
+    header , footer{
+        background-color: rgb(58, 58, 58);
+        color: aliceblue;
+        text-align: center;
+        padding: 20px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .sidebar{
+        background-color: rgb(45, 255, 202);
+        color: aliceblue;
+        text-align: center;
+        padding: 20px;
+    }
+    .content{
+        background-color: orange;
+        color: aliceblue;
+        text-align: center;
+        padding: 20px;
+    }
+
+    @media screen and (max-width:750px) {
+        .container{
+            flex-direction: column;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <main>
+            <div class="sidebar">Sidebar</div>
+            <div class="content">Content</div>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

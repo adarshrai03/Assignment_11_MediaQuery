@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive image</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    img{
+        width: 30%;     /*30% + 10px on both side = 100% cover of whole page*/
+        margin: 10px;
+    }
+    @media screen and (max-width:800px) {
+        image , img{
+            width: 45%;     /*45% is because of margin 10px (5px 5px on both side) , if we put width: 50% so no gap
+                            is remaining between image during compression*/
+        }        
+    }
+    @media screen and (max-width:450px) {
+        image , img{
+            width: 100%;
+        }        
+    }
+</style>
+<body>
+    <div class="container">
+        <img src="https://fastly.picsum.photos/id/479/200/300.jpg?hmac=24Y_2mfqS4Jh4cf1gOlnYGYBszrnuy3ebrKkszU885k" alt="">
+        <img src="https://fastly.picsum.photos/id/479/200/300.jpg?hmac=24Y_2mfqS4Jh4cf1gOlnYGYBszrnuy3ebrKkszU885k" alt="">
+        <img src="https://fastly.picsum.photos/id/479/200/300.jpg?hmac=24Y_2mfqS4Jh4cf1gOlnYGYBszrnuy3ebrKkszU885k" alt="">
+        
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_box</title>
+</head>
+<style>
+    body{
+        margin: 10px;
+
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 20px;
+        padding: 10px;
+        background-color: #f5f5f5;
+        height: 90vh;
+    }
+    .box{
+        border: 1.5px solid black;
+    }
+    .box1{
+        background-color: red;
+    }
+    .box2{
+        background-color: green;
+    }
+    .box3{
+        background-color: blue;
+    }
+    .box4{
+        background-color: orange;
+    }
+
+    @media screen and (max-width:700px) {
+        .container{
+           grid-template-columns: repeat(1 , 1fr);
+           grid-template-rows: auto;
+        }
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+    </div>
+</body>
+</html>
